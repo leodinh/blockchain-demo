@@ -2,11 +2,11 @@
 
 A simple web application that demonstrates how blockchain works
 
-##Demo
+## Demo
 
-Live Demo:
+Live Demo: https://leodinh.github.io/blockchain-demo/
 
-##Project description
+## Project description
 
 This app is a simple blochchain model with the below functionalities:
 * Generating genesis block with pre-defined difficulty level.
@@ -40,5 +40,7 @@ yarn start
 ```
 ## Compiles and minifies for production
 ```
-npm run build
+npm redeploy
+or
+yarn redeploy
 ```
