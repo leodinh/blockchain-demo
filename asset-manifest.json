@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/blockchain-demo/static/css/main.b24a0254.chunk.css",
+    "main.js": "/blockchain-demo/static/js/main.2bb554ce.chunk.js",
+    "main.js.map": "/blockchain-demo/static/js/main.2bb554ce.chunk.js.map",
+    "runtime-main.js": "/blockchain-demo/static/js/runtime-main.729b7c3c.js",
+    "runtime-main.js.map": "/blockchain-demo/static/js/runtime-main.729b7c3c.js.map",
+    "static/js/2.8050ad83.chunk.js": "/blockchain-demo/static/js/2.8050ad83.chunk.js",
+    "static/js/2.8050ad83.chunk.js.map": "/blockchain-demo/static/js/2.8050ad83.chunk.js.map",
+    "610538a06ea2e2844c10.worker.js": "/blockchain-demo/610538a06ea2e2844c10.worker.js",
+    "610538a06ea2e2844c10.worker.js.map": "/blockchain-demo/610538a06ea2e2844c10.worker.js.map",
+    "index.html": "/blockchain-demo/index.html",
+    "precache-manifest.68114b9fd80f21dd728eee6fb78f1f4e.js": "/blockchain-demo/precache-manifest.68114b9fd80f21dd728eee6fb78f1f4e.js",
+    "service-worker.js": "/blockchain-demo/service-worker.js",
+    "static/css/main.b24a0254.chunk.css.map": "/blockchain-demo/static/css/main.b24a0254.chunk.css.map",
+    "static/js/2.8050ad83.chunk.js.LICENSE": "/blockchain-demo/static/js/2.8050ad83.chunk.js.LICENSE",
+    "static/media/loading.svg": "/blockchain-demo/static/media/loading.7627687e.svg",
+    "static/media/mining.svg": "/blockchain-demo/static/media/mining.9064981b.svg",
+    "static/media/sprite.svg": "/blockchain-demo/static/media/sprite.4859caa7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.729b7c3c.js",
+    "static/js/2.8050ad83.chunk.js",
+    "static/css/main.b24a0254.chunk.css",
+    "static/js/main.2bb554ce.chunk.js"
+  ]
+}
