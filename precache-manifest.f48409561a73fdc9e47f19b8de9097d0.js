@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blockchain-demo/610538a06ea2e2844c10.worker.js"
   },
   {
-    "revision": "e29cadd46dd096e0c81a19a600afc9c8",
+    "revision": "a8912411699fca1002a689ce5cc71ce5",
     "url": "/blockchain-demo/index.html"
   },
   {
