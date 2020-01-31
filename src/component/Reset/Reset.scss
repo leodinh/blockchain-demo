@@ -1,0 +1,79 @@
+@import "../../assets/sass/abstracts/mixins";
+
+.reset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.difficulty {
+    font-size: 1.5rem;
+
+    span {
+        margin-left: 2px;
+    }
+}
+
+.reset-btn {
+    margin-top: 2rem;
+
+    &,
+    &:link,
+    &:visited {
+        background-color: var(--color-white);
+        text-transform: uppercase;
+        padding: 1.5rem 2rem;
+        display: inline-block;
+        border-radius: 2rem;
+        transition: all .2s;
+        border: 1px solid var(--color-primary);
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        border: 1px solid var(--color-right);
+        box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+    }
+}
+
+.configure__diff {
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    border: 2px solid var(--color-primary-light);
+    border-radius: 10px;
+    margin-top: 2rem;
+    overflow: hidden;
+
+    span {
+        padding: 1rem;
+        font-size: 1.8rem;
+    }
+
+    &-decre,
+    &-incre {
+        height: 100%;
+        padding: 0 .7rem;
+        text-align: center;
+        color: var(--color-white);
+        background-color: var(--color-primary-light);
+        border: none;
+        font-size: 2.3rem;
+
+        &:hover {
+            background-color: var(--color-primary-dark);
+            cursor: pointer;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

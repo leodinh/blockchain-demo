@@ -1,0 +1,78 @@
+@import "../../assets/sass/abstracts/mixins";
+
+.add__block {
+    display: block;
+    background-color: white;
+    padding: 2rem 5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--color-grey-dark-2);
+    transition: all .5s;
+    margin: 3rem auto;
+
+    @include respond(phone) {
+        position: fixed;
+        bottom: 0;
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+.mining {
+    width: 10rem;
+    height: 10rem;
+}
+
+.add {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 1rem;
+    margin: 2rem auto;
+    background: linear-gradient(45deg, #d4145a, #fbb03b);
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--color-white);
+    border-radius: 10rem;
+    box-shadow: 3px 3px 12px rgba(#333, .5);
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+
+        &::after {
+            background: linear-gradient(45deg, #d4145a, #fbb03b);
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:focus {
+        outline: none;
+        transform: translateY(1px);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.5s;
+    }
+
+    &-icon {
+        width: 3rem;
+        height: 3rem;
+        fill: var(--color-white)
+    }
+}
