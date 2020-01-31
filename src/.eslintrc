@@ -1,0 +1,6 @@
+{
+    "extends": ["react-app", "plugin:prettier/recommended", "plugin:import/errors"],
+    "rules": {
+        "import/no-webpack-loader-syntax": "off"
+    }
+}

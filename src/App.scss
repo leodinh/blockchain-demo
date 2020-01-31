@@ -1,0 +1,48 @@
+@import "./assets/sass/abstracts/mixins";
+
+.App {
+    display: grid;
+    grid-template-columns: [full-start] 1fr [center-start] 2fr [center-end] 1fr [full-end];
+    padding-top: 30px;
+    text-align: center;
+
+    @include respond(tab-port) {
+        grid-template-columns: auto;
+    }
+
+    & h1 {
+        text-transform: uppercase;
+    }
+}
+
+.main-content {
+    grid-column: center-start / center-end;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+        grid-column: auto;
+        width: 100vw;
+    }
+
+    h1 {
+        margin-bottom: 3rem;
+    }
+}
+
+.blockchain {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.right-side {
+    grid-column: center-end / full-end;
+
+    @include respond(tab-port) {
+        grid-column: auto;
+    }
+}
+
+.spinner {
+    width: 15rem;
+    height: 15rem;
+}
