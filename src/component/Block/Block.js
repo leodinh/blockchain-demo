@@ -1,10 +1,10 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import * as actions from "../../store/actions/index";
-import Icon from "../../assets/icon/sprite.svg";
-import { Utils } from "../../shared/utility";
-import "./Block.scss";
-import CSSTransition from "react-transition-group/CSSTransition";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import * as actions from '../../store/actions/index';
+import Icon from '../../assets/icon/sprite.svg';
+import { Utils } from '../../shared/utility';
+import './Block.scss';
+import CSSTransition from 'react-transition-group/CSSTransition';
 function Block(props) {
   const [mounted, setMounted] = React.useState(false);
   const utils = new Utils();
@@ -86,7 +86,7 @@ function Block(props) {
           <div className="detail">
             <div className="index">
               {props.block.index === 0
-                ? "GENESIS BLOCK"
+                ? 'GENESIS BLOCK'
                 : `BLOCK #${props.block.index}`}
             </div>
             <div className="timestamp">{props.block.timestamp}</div>
@@ -99,7 +99,7 @@ function Block(props) {
                 disabled={isProcessingPreviousBlock || isProcessingBlock}
               >
                 {isProcessingBlock ? (
-                  "Mining..."
+                  'Mining...'
                 ) : (
                   <svg className="fix_icon">
                     <use xlinkHref={`${Icon}#icon-wrench`} />

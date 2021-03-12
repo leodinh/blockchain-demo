@@ -1,11 +1,11 @@
-import React from "react";
-import "./AddBlock.scss";
-import * as actions from "../../store/actions/blockChain";
-import Icon from "../../assets/icon/sprite.svg";
-import MiningIcon from "../../assets/icon/mining.svg";
-import { connect } from "react-redux";
+import React from 'react';
+import './AddBlock.scss';
+import * as actions from '../../store/actions/blockChain';
+import Icon from '../../assets/icon/sprite.svg';
+import MiningIcon from '../../assets/icon/mining.svg';
+import { connect } from 'react-redux';
 function AddBlock(props) {
-  const [data, setData] = React.useState("");
+  const [data, setData] = React.useState('');
   const onChangeData = e => {
     setData(e.target.value);
   };
@@ -33,7 +33,7 @@ function AddBlock(props) {
               data,
               props.prevHash.hash,
               props.index,
-              props.difficulty
+              props.difficulty,
             )
           }
         >
@@ -51,13 +51,13 @@ const mapStateToProps = state => {
     prevHash: state.blockChain[state.blockChain.length - 1],
     index: state.blockChain.length,
     difficulty: state.difficulty,
-    isMining: state.isMining
+    isMining: state.isMining,
   };
 };
 const mapDispatchToProps = dispatch => {
   return {
     addBlock: (data, prevHash, index, difficulty) =>
-      dispatch(actions.addBlock(data, prevHash, index, difficulty))
+      dispatch(actions.addBlock(data, prevHash, index, difficulty)),
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(AddBlock);

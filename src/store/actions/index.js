@@ -3,5 +3,5 @@ export {
   initBlock,
   modifyData,
   revalidDate,
-  changeDifficulty
-} from "./blockChain";
+  changeDifficulty,
+} from './blockChain';

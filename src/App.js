@@ -1,11 +1,11 @@
-import React, { useCallback } from "react";
-import "./App.scss";
-import Block from "./component/Block/Block";
-import Reset from "./component/Reset/Reset";
-import AddBlock from "./component/AddBlock/AddBlock";
-import Spinner from "./assets/icon/loading.svg";
-import { useDispatch, useSelector } from "react-redux";
-import * as actions from "./store/actions/index";
+import React, { useCallback } from 'react';
+import './App.scss';
+import Block from './component/Block/Block';
+import Reset from './component/Reset/Reset';
+import AddBlock from './component/AddBlock/AddBlock';
+import Spinner from './assets/icon/loading.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import * as actions from './store/actions/index';
 function App(props) {
   const dispatch = useDispatch();
   const blockChain = useSelector(state => {
@@ -18,13 +18,13 @@ function App(props) {
     return state.isMining;
   });
   const onInitBlock = useCallback(
-    () => dispatch(actions.initBlock("Welcome to Blockchain Demo", difficulty)),
-    [difficulty, dispatch]
+    () => dispatch(actions.initBlock('Welcome to Blockchain Demo', difficulty)),
+    [difficulty, dispatch],
   );
   React.useEffect(() => {
     onInitBlock();
   }, [onInitBlock]);
-  let content = "";
+  let content = '';
   if (isMining === true && blockChain.length === 0) {
     content = (
       <div className="main-content">

@@ -1,10 +1,10 @@
-import * as actionTypes from "../actions/actionTypes";
-import { updateObject, Utils } from "../../shared/utility";
+import * as actionTypes from '../actions/actionTypes';
+import { updateObject, Utils } from '../../shared/utility';
 const initialState = {
   blockChain: [],
   isMining: false,
   difficulty: 4,
-  revalidatingBlock: []
+  revalidatingBlock: [],
 };
 const addBlockStart = (state, action) => {
   return updateObject(state, { isMining: true });
@@ -12,27 +12,27 @@ const addBlockStart = (state, action) => {
 const addBlockSuccess = (state, action) => {
   return updateObject(state, {
     blockChain: [...state.blockChain, action.block],
-    isMining: false
+    isMining: false,
   });
 };
 const modifyData = (state, action) => {
   let blockChain = [...state.blockChain];
   let modifiedBlock = blockChain[action.index];
-  modifiedBlock["data"] = action.data;
+  modifiedBlock['data'] = action.data;
   let utils = new Utils();
   let newHashValue = utils.hashBlock(modifiedBlock);
-  blockChain[action.index]["hash"] = newHashValue;
+  blockChain[action.index]['hash'] = newHashValue;
   for (let i = action.index + 1; i < blockChain.length; i++) {
     blockChain[i].previousHash = blockChain[i - 1].hash;
     blockChain[i].hash = utils.hashBlock(blockChain[i]);
   }
   return updateObject(state, {
-    blockChain: blockChain
+    blockChain: blockChain,
   });
 };
 const revalidateBlockStart = (state, action) => {
   return updateObject(state, {
-    revalidatingBlock: [...state.revalidatingBlock, action.index]
+    revalidatingBlock: [...state.revalidatingBlock, action.index],
   });
 };
 const revalidateBlockSuccess = (state, action) => {
@@ -45,18 +45,18 @@ const revalidateBlockSuccess = (state, action) => {
     }
   }
   const newRevalidatingBlock = state.revalidatingBlock.filter(
-    index => index !== action.block.index
+    index => index !== action.block.index,
   );
 
   return updateObject(state, {
     blockChain: newBlockChain,
-    revalidatingBlock: newRevalidatingBlock
+    revalidatingBlock: newRevalidatingBlock,
   });
 };
 const changeDifficulty = (state, action) => {
   return updateObject(state, {
     difficulty: action.level,
-    blockChain: []
+    blockChain: [],
   });
 };
 export default (state = initialState, action) => {

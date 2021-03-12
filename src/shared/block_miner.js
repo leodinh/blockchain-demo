@@ -1,4 +1,4 @@
-import { Utils } from "./utility.js";
+import { Utils } from './utility.js';
 
 let utils = new Utils();
 let timestamp,
@@ -22,12 +22,12 @@ function createBlock() {
     timestamp: timestamp,
     data: data,
     previousHash: prevHash,
-    index: index
+    index: index,
   };
 
   var nonce = utils.calculateNonce(returnBl);
-  returnBl["nonce"] = nonce;
+  returnBl['nonce'] = nonce;
   var hash = utils.hashBlock(returnBl);
-  returnBl["hash"] = hash;
+  returnBl['hash'] = hash;
   postMessage(returnBl);
 }

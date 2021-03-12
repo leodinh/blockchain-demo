@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import "./Reset.scss";
-import * as actions from "../../store/actions/index";
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import './Reset.scss';
+import * as actions from '../../store/actions/index';
 function Reset() {
   const dispatch = useDispatch();
   const changeDifficulty = level => {
